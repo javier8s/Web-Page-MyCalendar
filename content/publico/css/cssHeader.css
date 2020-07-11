@@ -1,0 +1,141 @@
+/*Todo lo relativo a la cabecera permite que se quede anclada arriba de la pagina y que se responsive*/
+/*Links de la cabecera*/
+a {
+    color: #000;
+}
+#inicio {
+    background-color: rgba(255, 194, 54, 0.66);
+}
+#inicio:hover {
+    background: #ff1428;
+}
+.header ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    background-color: #fff;
+}
+.header li a {
+    font-family: sans-serif;
+    display: block;
+    padding: 20px 20px;
+    border-right: 1px solid #f4f4f4;
+    text-decoration: none;
+}
+/*CSS del logo superior izquierdo*/
+.header .brand {
+    color: blueviolet;
+    display: block;
+    float: left;
+    font-size: 2em;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+/*CSS para que el menu se quede dentro del boton*/
+.header .menu {
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+}
+.header li a:hover,
+.header .menu-btn:hover {
+    background-color: #f4f4f4;
+}
+.header .menu-icon {
+    cursor: pointer;
+    display: inline-block;
+    /* Sirve para cuando esta comprimida la pantalla (responsive)*/
+    float: right;
+    padding: 28px 20px;
+    position: relative;
+    user-select: none;
+}
+.header .menu-icon .navicon {
+    background: #333;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background .2s ease-out;
+    width: 18px;
+}
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+    background: #333;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+.header .menu-icon .navicon:before {
+    top: 5px;
+}
+.header .menu-icon .navicon:after {
+    top: -5px;
+}
+/*CSS para que el menu-btn sea animado*/
+.header .menu-btn {
+    display: none;
+}
+.header .menu-btn:checked ~ .menu {
+    max-height: 300px;
+}
+.header .menu-btn:checked ~ .menu-icon .navicon {
+    background: transparent;
+}
+.header .menu-btn:checked ~ .menu-icon .navicon:before {
+    transform: rotate(-45deg);
+}
+.header .menu-btn:checked ~ .menu-icon .navicon:after {
+    transform: rotate(45deg);
+}
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+    top: 0;
+}
+/*Tamaños para cuando NO este comprimida la pagina*/
+@media (min-width: 1400px) {
+    .header li {
+        float: left;
+    }
+    .header li a {
+        padding: 20px 30px;
+    }
+    .header .menu {
+        clear: none;
+        float: right;
+        max-height: none;
+    }
+    .header .menu-icon {
+        display: none;
+    }
+}
+/*Tamaños para cuando este comprimida la pagina*/
+@media (max-width: 1400px) {
+    .header li a {
+        padding: 5px 10px;
+    }
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica, sans-serif;
+ }
+html {
+    background: url(fondo.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.header {
+    background-color: #fff;
+    box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+}

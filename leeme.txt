@@ -1,0 +1,21 @@
+PRÁCTICA TECNOLOGÍAS WEB: GESTOR DE HORARIOS 
+
+Alumno: Sánchez Gozalo, Javier
+
+1. Despliegue/Instalación:
+
+Esta aplicación de Gestión de Horarios se ha desplegado sobre una distribución XAMPP. 
+Ésta contiene principalmente las siguientes partes: 
+	- Servidor Web Apache
+	- Gestor de Bases de Datos MySQL
+	- Intérprete del lenguaje PHP
+   Una vez que xampp esta instalado, hay que seguir los siguientes pasos:
+	1 - Ejecutar  Apache.
+	2 - Ejecutar MySQL.
+		3 - Introducir copiar el contenido de la página web en el directorio “htdocs” de xampp, que normalmente suele ser “C:\xampp\htdocs”(este fiche también se podría haber cambiado en la configuración ,  al igual que el fichero de destino , en este caso index.php, pero por accesibilidad os he dejado index.php , por lo que no deberíais tener ningún problema). 
+		4 - Ejecutar el archivo sql.sql que contiene la página, normalmente xamp incluye phpmydmin por lo que al activar MySQL, podreís ir a “http://localhost/phpmyadmin/” y ejecutar el código donde se os generará la base de datos.
+	5 – Cambiar las variables  del documento(con / de la página web): “/conexión/conectar.php” (ver memoria para más información).
+	6 - Acceder a la página: introducir localhost en un navegador web.
+	7 - Usar usuario por defecto, para acceder a una página privada o crear un propio en el registro:
+		- Usuario: prueba@uva.es
+		- Contraseña: prueba

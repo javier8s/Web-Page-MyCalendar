@@ -1,0 +1,243 @@
+/*CSS de la tabla(todo dentro de contenido), además contiene botones de añadir/quitar celdas o tareas */
+/* Contenido es el div que envuelve a todo*/
+/* row es el div que envuelve las celdas */
+/* cell es el div de cada celda donde esta el contenido*/
+#contenido {
+    width: 100%;
+    margin: 5% 0%;
+}
+#contenido > #tabla1 {
+    width: 100%;
+    display: table;
+}
+#contenido > #tabla1 > div[class^="row"] {
+    display: table-row;
+}
+#contenido > #tabla1 > div[class^="row"] >  #b0 {
+    opacity: 0;
+}
+#contenido > #tabla1 > div[class^="row"] > .cell {
+    display: table-cell;
+    padding: 15px 15px;
+}
+#contenido >#tabla1 > div[class^="row"] > .cell >div[class^="task"] {
+    min-width: 120px;
+    margin: 5px;
+    min-height: 50px;
+    overflow: hidden;
+}
+#nombreTabla {
+    font-size: xx-large;
+    width: max-content;
+    text-align: center;
+    font-family: fantasy;
+}
+.cell {
+    font-weight: bold;
+    text-align: center;
+}
+#opcionesTabla {
+    padding: 1% 1%;
+    margin : 1% 1%;
+    display: block;
+    width: 400px;
+}
+#nameTask {
+    margin: 1%;
+    padding: 2%;
+    text-align: center;
+    border-style: solid;
+}
+#opcionesAdd {
+    display: flex;
+}
+#opcionesPublico {
+    font-family: Arial;
+    display: flex;
+    padding: 5%;
+    font-size: 20px;
+}
+#opcionesTabla {
+    background: rgba(99, 167, 226, 0.64);
+}
+.cell.scheduler {
+    background-color: rgba(225, 224, 50, 0.84);
+}
+#publico {
+    transition: all .2s;
+    width: 22px; height: 22px;
+    border: 2px solid #cccccc;
+}
+#textPublico {
+    background-color: rgba(104, 87, 225, 0.55);
+}
+#contenido >#tabla1 > div[class^="row"] > .cell >div[class^="task"] {
+    background: indianred;
+}
+.row > .cell:first-child {
+    background-color: rgba(133, 225, 225, 0.84);
+}
+#nombreTabla {
+    background: white;
+}
+#contenido > #tabla1 > div[class^="row"] > .cell {
+    border: 1px solid #999999;
+}
+.cell {
+    background-color: rgba(247, 220, 11, 0.2);
+}
+#contenido >#tabla1 > div[class^="row"] > .cell.scheduler:hover {
+    background: #99c2ff;
+}
+#nameTask {
+    box-shadow: 0px 0px 5px rgba(66, 66, 66, .75);
+}
+#opcionesTabla {
+    border-radius: 48px 48px 48px 48px;
+    -moz-border-radius: 48px 48px 48px 48px;
+    -webkit-border-radius: 48px 48px 48px 48px;
+}
+.task.ui-draggable.ui-draggable-handle {
+    border-radius: 4px 4px 4px 4px;
+    -moz-border-radius: 4px 4px 4px 4px;
+    -webkit-border-radius: 4px 4px 4px 4px;
+    border: 1px solid #800080;
+}
+#a {
+    box-shadow:inset 0px 1px 0px 0px #54a3f7;
+    background:linear-gradient(to bottom, #007dc1 5%, #0061a7 100%);
+    background-color:#007dc1;
+    border-radius:3px;
+    border:1px solid #124d77;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:13px;
+    padding:6px 24px;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #154682;
+}
+#a:hover {
+    background:linear-gradient(to bottom, #0061a7 5%, #007dc1 100%);
+    background-color:#0061a7;
+}
+#a:active {
+    position:relative;
+    top:1px;
+}
+#opcionesAdd {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 15px;
+    width: 100%;
+}
+/*Botones de añadir/quitar celdas*/
+#opcionesAdd select {
+    font-family: 'Arial';
+    display: inline-block;
+    cursor: pointer;
+    outline: 0;
+    border: 2px solid #0530db;
+    border-radius: 64px;
+    background: #df5b5b;
+    color: #720b0b;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+#opcionesAdd select::-ms-expand {
+    display: none;
+}
+#opcionesAdd select:hover,
+#opcionesAdd select:focus {
+    color: #d60909;
+    background: #6e0000;
+}
+#opcionesAdd select:disabled {
+    opacity: 0.7;
+    pointer-events: none;
+}
+#contenido > #tabla1 > div[class^="row"] >  .b0 {
+    text-align: center;
+}
+#contenido > #tabla1 > div[class^="row"] >  .b0 > button {
+    text-align: center;
+    font-size: xx-large;
+    border: 2px solid #08dbdb;
+    border-radius: 100px;
+    width: 50px;
+    background:linear-gradient(to bottom, #0061a7 5%, #007dc1 100%);
+    background-color:#0061a7;
+    font-weight: bolder;
+}
+#contenido > #tabla1 > div[class^="row"] >  .b0 > button:hover {
+    background:linear-gradient(to bottom, #a70500 5%, rgb(255, 0, 8) 100%);
+    background-color: #a71f28;
+}
+
+.vacio {
+    opacity: 0;
+}
+.botonEliminarTarea {
+    background: red;
+    float: right;
+    opacity: 0;
+}
+.cell:hover .botonEliminarTarea {
+    opacity: 1;
+}
+.selColor {
+    background: red;
+
+}
+
+
+.cell:hover .botonAñadirTarea{
+    opacity: 1;
+}
+#selecColor{
+    opacity: 0;
+}
+.cell:hover #selecColor{
+    opacity: 1;
+}
+
+.botonAñadirTarea {
+    background: #30ff5a;
+    float: right;
+    opacity: 0;
+}
+@media (max-width: 760px){
+    #contenido >#tabla1 > div[class^="row"] {
+        display: flex;
+        flex-direction: column ;
+        width: 100%;
+    }
+    #contenido >#tabla1 > div[class^="row"] > .cell >div[class^="task"] {
+        width: 100px;
+        flex-wrap:  wrap;
+        display: inline-block;
+    }
+    #contenido >#tabla1 > #dias  {
+        display: none;
+    }
+    .diasMov {
+        text-align: center;
+    }
+    .diasMov {
+        background-color: rgba(226, 226, 226, 0.89);
+    }
+    .cell.scheduler {
+        background-color: rgba(225, 224, 50, 0.5);
+    }
+    #contenido >#tabla1 > div[class^="row"] > .cell >div[class^="task"] {
+        background: indianred;
+    }
+}
+
+
+
+
+
+

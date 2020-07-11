@@ -1,0 +1,8 @@
+/*CSS de las ventanas emergentes, el resto de css esta dentro de otro css que proporciona jquery*/
+#camposConf {
+    display: flex;
+}
+
+.ui-widget input {
+    margin: auto;
+}

@@ -1,0 +1,89 @@
+/*CSS del footer, el cual contiene la selección de tablas*/
+.footer {
+    background-color: rgba(167, 22, 0, 0.5);
+    position: inherit;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+#salir {
+
+    background: #cad477;
+}
+
+#selectTablas {
+    float: right;
+    display: grid;
+    text-align: center;
+
+
+}
+#txtElegir {
+    width: max-content;
+    background-color: rgba(47, 93, 255, 0.71);
+    margin: 1%;
+}
+
+.opciones {
+    margin: 1% 1% 1% 1%;;
+
+}
+#usuario {
+    display: none;
+}
+
+/*selectTabla*/
+.select {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 15px;
+    width: 100%;
+}
+.select select {
+         font-family: 'Arial';
+         display: inline-block;
+         width: 100%;
+         cursor: pointer;
+         padding: 9px 10px;
+         outline: 0;
+         border: 2px solid #000000;
+         border-radius: 47px;
+         background: #e6e6e6;
+         color: #7b7b7b;
+         appearance: none;
+         -webkit-appearance: none;
+         -moz-appearance: none;
+     }
+.select select::-ms-expand {
+    display: none;
+}
+.select select:hover,
+.select select:focus {
+    color: #1486f0;
+    background: #9ecfc9;
+}
+.select select:disabled {
+    opacity: 0.2;
+    pointer-events: none;
+}
+
+/*mostrar tabla*/
+
+#mostrarTabla {
+    box-shadow:inset 0px 0px 15px 3px #23395e;
+    background:linear-gradient(to bottom, #2e466e 5%, #415989 100%);
+    background-color:#2e466e;
+    border-radius:17px;
+    border:1px solid #1f2f47;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:30px;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #263666;
+}
+#mostrarTabla:hover {
+    background:linear-gradient(to bottom, #415989 5%, #2e466e 100%);
+    background-color:#415989;
+}

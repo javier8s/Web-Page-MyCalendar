@@ -1,0 +1,12 @@
+/*CSS del div contendor , contiene a la tabla (cuyo css esta en cssTabla.css)*/
+.wrapper {
+    min-height: 100%;
+    margin-bottom: -50px;
+    padding-top: 75px;
+    padding-left: 5%;
+    padding-right: 5%;
+
+}
+
+
+

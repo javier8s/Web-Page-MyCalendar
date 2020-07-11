@@ -1,0 +1,305 @@
+/*Envuelve al contenido, sus propiedades son para establecer bien el footer*/
+.wrapper {
+    display: grid;
+    min-height: 100%;
+    margin-bottom: -50px;
+    padding-top: 75px;
+}
+/*La página tiene cuatro partes logeo,
+ caracteristicas o texto donde se ve código simplevista,
+  imagenes rotando,  las tablas públicas
+  además hay otra página para registrarse*/
+/*------------------------------------------------------------------------------------*/
+/*Entrada para logearse en la pagina*/
+#errorLog {
+    color: red;
+}
+.botReg {
+    box-shadow: 0px 10px 14px -7px #276873;
+    background:linear-gradient(to bottom, #599bb3 5%, #408c99 100%);
+    background-color:#599bb3;
+    border-radius:8px;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:20px;
+    font-weight:bold;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #3d768a;
+}
+.botReg:hover {
+    background:linear-gradient(to bottom, #408c99 5%, #599bb3 100%);
+    background-color:#408c99;
+}
+
+.textLog {
+    font-family: sans-serif;
+}
+.inputLog {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+#log {
+    width: 50%;
+    padding: 12px 20px;
+    margin: auto;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    background-color: rgba(255, 189, 1, 0.75);
+    display: flex;
+}
+#principal {
+    display: flex;
+    flex-direction:  column ;
+
+    padding : 20px;
+}
+#entrar {
+    background-color: #5755af;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+#entrar:hover {
+    background-color: rgba(115, 113, 255, 0.88);
+}
+#formLog {
+    margin: auto;
+
+}
+@media (max-width: 1100px) {
+    #logImg {
+        width: 100px;
+        height: 100px;
+    }
+}
+@media (max-width: 900px) {
+    #logImg {
+        display: none;
+    }
+}
+/*------------------------------------------------------------------------------------*/
+/*Texto donde esta el código*/
+#caracteristicas {
+    margin : 5%;
+    -webkit-border-radius: 24px;
+    -moz-border-radius: 24px;
+    border-radius: 24px;
+    padding: 0 5% 5% 5%;
+    background-color: rgba(244, 0, 19, 0.78);
+}
+/*Parte donde hay Código visual*/
+pre {
+    overflow: auto;
+}
+pre, code {
+    font-family: monospace, monospace;
+    background: white;
+}
+pre > code {
+    display: block;
+    padding: 1rem;
+    word-wrap: normal;
+}
+/*------------------------------------------------------------------------------------*/
+/*Parte donde hay una imagen girando*/
+.tech-slideshow {
+    height: 62px;
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    transform: translate3d(0, 0, 0);
+}
+#imagenes {
+    background-color: rgba(27, 244, 77, 0.25);
+    padding: 5%;
+    height: 100%;
+    width: 100%;
+    overflow: visible;
+
+}
+.tech-slideshow > div {
+    height: 200px;
+    width: 2526px;
+    background: url(collage.jpg);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    transform: translate3d(0, 0, 0);
+}
+.tech-slideshow .mover-1 {
+    animation: moveSlideshow 8s linear infinite;
+}
+.tech-slideshow .mover-2 {
+    opacity: 0;
+    transition: opacity 0.25s ease-out;
+    background-position: 0 -200px;
+    animation: moveSlideshow 15s linear infinite;
+}
+@keyframes moveSlideshow {
+    100% {
+        transform: translateX(-66.6666%);
+    }
+}
+/*------------------------------------------------------------------------------------*/
+/*Parte donde esta la tabla*/
+#publico {
+    background: #599bb3;
+    margin :  auto;
+    margin-block-end: 10%;
+    padding: 1%;
+}
+/*-----------------------OTRA PAGINA - REGISTRO--------------------------------------------------------*/
+/*Parte del registro*/
+
+#registro {
+
+    padding: 5%;
+    margin: 5%;
+    margin-top : 0%;
+    background-color: rgba(33, 85, 244, 0.78);
+}
+#opciones {
+    display: flex;
+    background-color: rgba(99, 50, 31, 0.18);
+    padding: 5%;
+}
+#checkterms {
+    height: 18px;
+    width: 18px;
+}
+button[disabled=disabled], button:disabled {
+    background: #cbc9c7;
+}
+button[disabled=disabled], button:disabled:hover {
+    background: #cbc9c7;
+}
+#terms {
+    padding: 5px;
+    display: flex;
+}
+#gender {
+    padding: 5px;
+    background:  #fff8b7;
+}
+
+
+.field {
+    background: #fff8b7;
+    padding: 1%;
+    margin: 1%;
+}
+
+#titleRegistro {
+    text-align: center;
+    background: white;
+    width: 130px;
+    height: 20px;
+    margin: auto;
+    padding: 1% 1%;
+    font-family: sans-serif;
+}
+#contenidoRegistro {
+    padding: 1% 5%;
+    overflow: hidden;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+
+}
+#camposReg {
+    display: grid;
+}
+#regImg {
+    margin: auto;
+    width:300px;
+    height:300px;
+}
+
+.field {
+    display: inline-block;
+}
+.text {
+    padding: 1%;
+    font-family: initial;
+    width: 300px;
+}
+.botReg{
+    margin: 1%;
+    padding: 1%;
+
+}
+.error {
+    color: red;
+}
+
+#s {
+    float: right;
+}
+@media (max-width: 1000px) {
+    #ejemplo {
+        display: none;
+    }
+    #regImg {
+        width:170px;
+        height:170px;
+    }
+}
+@media (max-width: 600px) {
+
+    #regImg {
+        margin-top: 0;
+        width:50px;
+        height:50px;
+    }
+}
+@media (max-width: 450px) {
+
+    #regImg {
+        display: none;
+    }
+}
+#txtElegir {
+    padding: 1%;
+    font-family: fantasy;
+    text-align: center;
+    width: max-content;
+    background: aliceblue;
+}
+#txtImg {
+    padding: 1%;
+    font-family: fantasy;
+    text-align: center;
+    margin: auto;
+    width: max-content;
+    background: aliceblue;
+}
+
+#msgReg {
+    margin: auto;
+    text-align: center;
+    font-size: x-large;
+    font-family: "Book Antiqua";
+    background: yellow;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #6857e1;
+    width: max-content;
+    border-radius:50px;
+    -moz-border-radius:50px;
+    -webkit-border-radius:50px;
+}
+#politica {
+    color: #00dfe6;
+    font-style: oblique;
+}

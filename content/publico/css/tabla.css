@@ -1,0 +1,237 @@
+/*CSS de la tabla (el horario)*/
+/* Contenido es el div que envuelve a todo*/
+/* row es el div que envuelve las celdas */
+/* cell es el div de cada celda donde esta el contenido*/
+#contenido {
+    width: 100%;
+    margin: 5% 0%;
+}
+#contenido > #tabla1 {
+    width: 100%;
+    display: table;
+}
+#contenido > #tabla1 > div[class^="row"] {
+    display: table-row;
+}
+#contenido > #tabla1 > div[class^="row"] >  #b0 {
+    opacity: 0;
+}
+#contenido > #tabla1 > div[class^="row"] > .cell {
+    display: table-cell;
+    padding: 15px 15px;
+}
+#contenido >#tabla1 > div[class^="row"] > .cell >div[class^="task"] {
+    width: 120px;
+    margin: 5px;
+    height: 50px;
+}
+#nombreTabla {
+    font-size: xx-large;
+    width: max-content;
+    text-align: center;
+    font-family: fantasy;
+}
+.cell {
+    font-weight: bold;
+    text-align: center;
+}
+#opcionesTabla {
+    padding: 1% 1%;
+    margin : 1% 1%;
+    display: block;
+    width: 400px;
+}
+#nameTask {
+    margin: 1%;
+    padding: 2%;
+    text-align: center;
+    border-style: solid;
+}
+#opcionesAdd {
+    display: flex;
+}
+#opcionesPublico {
+    font-family: Arial;
+    display: flex;
+    padding: 5%;
+    font-size: 20px;
+}
+#opcionesTabla {
+    background: rgba(99, 167, 226, 0.64);
+}
+.cell.scheduler {
+    background-color: rgba(225, 224, 50, 0.84);
+}
+#textPublico {
+    background-color: rgba(104, 87, 225, 0.55);
+}
+#contenido >#tabla1 > div[class^="row"] > .cell >div[class^="task"] {
+    background: indianred;
+}
+.row > .cell:first-child {
+    background-color: rgba(133, 225, 225, 0.84);
+}
+#nombreTabla {
+    background: white;
+}
+#contenido > #tabla1 > div[class^="row"] > .cell {
+    border: 1px solid #999999;
+}
+.cell {
+    background-color: rgba(247, 220, 11, 0.2);
+}
+#contenido >#tabla1 > div[class^="row"] > .cell.scheduler:hover {
+    background: #99c2ff;
+}
+#nameTask {
+    box-shadow: 0px 0px 5px rgba(66, 66, 66, .75);
+}
+
+
+#a {
+    box-shadow:inset 0px 1px 0px 0px #54a3f7;
+    background:linear-gradient(to bottom, #007dc1 5%, #0061a7 100%);
+    background-color:#007dc1;
+    border-radius:3px;
+    border:1px solid #124d77;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:13px;
+    padding:6px 24px;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #154682;
+}
+#a:hover {
+    background:linear-gradient(to bottom, #0061a7 5%, #007dc1 100%);
+    background-color:#0061a7;
+}
+#a:active {
+    position:relative;
+    top:1px;
+}
+/*Botones de añadir / quitar celdas*/
+#opcionesAdd {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+#opcionesAdd select {
+    font-family: 'Arial';
+    display: inline-block;
+    cursor: pointer;
+    outline: 0;
+    border: 2px solid #0530db;
+    border-radius: 64px;
+    background: #df5b5b;
+    color: #720b0b;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+#opcionesAdd select::-ms-expand {
+    display: none;
+}
+#opcionesAdd select:hover,
+#opcionesAdd select:focus {
+    color: #d60909;
+    background: #6e0000;
+}
+#opcionesAdd select:disabled {
+    opacity: 0.7;
+    pointer-events: none;
+}
+@media (max-width: 1200px){
+    #contenido >#tabla1 > div[class^="row"] {
+        display: flex;
+        flex-direction: column ;
+        width: 100%;
+    }
+    #contenido >#tabla1 > div[class^="row"] > .cell >div[class^="task"] {
+        width: 100px;
+        flex-wrap:  wrap;
+        display: inline-block;
+    }
+    #contenido >#tabla1 > #dias  {
+        display: none;
+    }
+    .diasMov {
+        text-align: center;
+    }
+    .diasMov {
+        background-color: rgba(226, 226, 226, 0.89);
+    }
+    .cell.scheduler {
+        background-color: rgba(225, 224, 50, 0.5);
+    }
+    #contenido >#tabla1 > div[class^="row"] > .cell >div[class^="task"] {
+        background: indianred;
+    }
+}
+
+/*Seleccion de tablas*/
+#selecTablas {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 15px;
+    width: 50%;
+}
+
+
+
+#mostrarTabla {
+    box-shadow:inset 0px 0px 15px 3px #23395e;
+    background:linear-gradient(to bottom, #2e466e 5%, #415989 100%);
+    background-color:#2e466e;
+    border-radius:17px;
+    border:1px solid #1f2f47;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:30px;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #263666;
+
+}
+#mostrarTabla:hover {
+    background:linear-gradient(to bottom, #415989 5%, #2e466e 100%);
+    background-color:#415989;
+}
+
+
+.select {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 15px;
+    width: 400px;
+}    .select select {
+         font-family: 'Arial';
+         display: inline-block;
+         width: 100%;
+         cursor: pointer;
+         padding: 9px 10px;
+         outline: 0;
+         border: 2px solid #000000;
+         border-radius: 47px;
+         background: #e6e6e6;
+         color: #7b7b7b;
+         appearance: none;
+         -webkit-appearance: none;
+         -moz-appearance: none;
+     }
+.select select::-ms-expand {
+    display: none;
+}
+.select select:hover,
+.select select:focus {
+    color: #1486f0;
+    background: #9ecfc9;
+}
+.select select:disabled {
+    opacity: 0.2;
+    pointer-events: none;
+}
+
